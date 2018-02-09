@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{77B06191-3D63-4C32-B007-44D1EFA2DCF5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Common</RootNamespace>
+    <AssemblyName>Common.Utils</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Common.Utils.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DocumentationFile>bin\Debug\Common.Utils.XML</DocumentationFile>
+    <NoWarn>1591 1573</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DocumentationFile>bin\Release\Common.Utils.xml</DocumentationFile>
+    <NoWarn>1591 1573</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Flipdog\C#-Projects\SharpZipLib\Build\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CEnvironment.cs" />
+    <Compile Include="Components\HelpChm.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\HelpChm.designer.cs">
+      <DependentUpon>HelpChm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\HelpChm\Editor\CHMFileNameEditor.cs" />
+    <Compile Include="Components\HelpChm\Editor\IndexerTypeEditor.cs" />
+    <Compile Include="Components\HelpChm\Forms\frmHelpIndexEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\HelpChm\Forms\frmHelpIndexEditor.designer.cs">
+      <DependentUpon>frmHelpIndexEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Types.HelpIndex.cs" />
+    <Compile Include="Controls\Controls.cs" />
+    <Compile Include="Controls\DriveComboBox\DriveComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\DriveComboBox\ImageCombo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\List_View\ListViewLog.cs" />
+    <Compile Include="Controls\List_View\ListViewResizer.cs" />
+    <Compile Include="Controls\List_View\ListViewers.cs" />
+    <Compile Include="Exceptions\FormException.cs" />
+    <Compile Include="Exceptions\Forms\frmFormException.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exceptions\Forms\frmFormException.Designer.cs">
+      <DependentUpon>frmFormException.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Forms.cs" />
+    <Compile Include="Graphic\Graph.cs" />
+    <Compile Include="Graphic\RendererText.cs" />
+    <Compile Include="Handlers.cs" />
+    <Compile Include="IO\Directory\DeleteEmptyDirs.cs" />
+    <Compile Include="IO\Files.cs" />
+    <Compile Include="IO\Serialization\FileSerializer.cs" />
+    <Compile Include="IO\Serialization\Serializer.cs" />
+    <Compile Include="IO\TextFileReader.cs" />
+    <Compile Include="Math\Convert.cs" />
+    <Compile Include="Math\FileSize.cs" />
+    <Compile Include="Math\Progress.cs" />
+    <Compile Include="MsgBox.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="U2.cs" />
+    <Compile Include="Win32\ShellAPI.cs" />
+    <Compile Include="Win32\User32API.cs" />
+    <Compile Include="Zip\Types\ZipFileResult.cs" />
+    <Compile Include="Zip\Types\ZipFilesInfo.cs" />
+    <Compile Include="Zip\Types\ZipFileStatus.cs" />
+    <Compile Include="Zip\Types\ZipMaskFile.cs" />
+    <Compile Include="Zip\ZipFiles.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Components\HelpChm\Forms\frmHelpIndexEditor.resx">
+      <DependentUpon>frmHelpIndexEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DriveComboBox\DriveComboBox.resx">
+      <DependentUpon>DriveComboBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DriveComboBox\ImageCombo.resx">
+      <DependentUpon>ImageCombo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exceptions\Forms\frmFormException.resx">
+      <DependentUpon>frmFormException.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\about.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Common.Utils.snk" />
+    <None Include="Resources\delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="_ChangeLog.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

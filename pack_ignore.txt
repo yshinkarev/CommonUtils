@@ -1,0 +1,6 @@
+bin\*.*
+*.cmd
+pack_ignore.*
+Resources
+_ReSharper.Common.Utils\*
+Common.Utils.postbuild
